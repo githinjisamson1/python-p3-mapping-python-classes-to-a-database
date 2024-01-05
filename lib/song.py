@@ -33,6 +33,8 @@ class Song:
         # !get and update id
         self.id = CURSOR.execute(
             "SELECT last_insert_rowid() FROM songs").fetchone()[0]
+        # OR
+        # self.id = CURSOR.lastrowid
 
     # !implementing DRY/return song to work with
     @classmethod
